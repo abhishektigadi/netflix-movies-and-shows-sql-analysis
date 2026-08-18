@@ -42,3 +42,23 @@ CREATE TABLE titles (
     tmdb_score            NUMERIC(4, 2)
 );
 
+
+COPY public.credits (person_id, id, name, "character", role)
+FROM 'C:/Users/YOUR_USERNAME/Downloads/credits.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ',',
+    QUOTE '"',
+    ESCAPE '\'
+);
+
+COPY public.titles
+FROM 'C:/Users/YOUR_USERNAME/Downloads/titles.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ',',
+    QUOTE '"',
+    ESCAPE '\'
+);
