@@ -42,20 +42,3 @@ CREATE TABLE titles (
     tmdb_score            NUMERIC(4, 2)
 );
 
-##  🗄️ Data Loading
-```sql
-
-COPY public.credits FROM '/path/to/credits.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ESCAPE '\');
-COPY public.titles FROM '/path/to/titles.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ESCAPE '\');
-
-##  🔍 Key Business Questions Answered
-
-   - What are the top and bottom 10 movies and TV shows by IMDb rating?
-
-   - How do average IMDb and TMDB scores compare across content types, countries, and age ratings?
-
-   - How has content production volume grown by decade since 1940?
-
-   - Who are the top 20 most frequent actors and directors on Netflix?
-
-   - Which actors played the same character across multiple distinct titles?
